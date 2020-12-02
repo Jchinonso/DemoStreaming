@@ -1,0 +1,18 @@
+.movies-main {
+  padding: 25px 100px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .movies-main {
+    padding: 34px 65px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .movies-main {
+    padding: 34px 65px;
+    margin-bottom: 50px;
+  }
+}

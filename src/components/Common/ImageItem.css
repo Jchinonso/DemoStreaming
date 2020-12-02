@@ -1,0 +1,36 @@
+.image-span {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.Image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-title {
+  color: #1e1e1e;
+  margin-top: 25px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .image-span {
+    width: 180px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .image-span {
+    width: 180px;
+    height: 232px;
+    display: flex;
+    flex-direction: column;
+  }
+}

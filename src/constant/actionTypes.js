@@ -1,0 +1,1 @@
+export const GET_ALL_ENTRIES = 'GET_ALL_ENTRIES';

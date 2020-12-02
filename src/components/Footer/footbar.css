@@ -1,0 +1,112 @@
+.footer-container {
+  width: 100%;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 150px;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 220px;
+  align-items: center;
+  color: white;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+}
+
+ul li {
+  border-right: 2px solid white;
+}
+
+ul li:first-child {
+  padding-left: 0;
+}
+
+ul li:last-child {
+  border-right: none;
+}
+
+.link-line {
+  flex-basis: 30%;
+  width: 100%;
+}
+
+ul li {
+  color: white;
+  padding: 0px 25px;
+}
+
+.copyright {
+  color: white;
+  text-align: left;
+  width: 100%;
+  flex-basis: 30%;
+  margin-left: 65px;
+}
+
+.medialine {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+  width: 100%;
+}
+
+.socialicons {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 30%;
+}
+.socialicons i {
+  width: 35px;
+  height: 35px;
+}
+
+.SocialIconFacebook {
+  background: url(./assets/social/facebook-white.svg);
+  background-size: 35px 35px;
+  cursor: pointer;
+}
+
+.SocialIconFacebook:hover {
+  background: url(./assets/social/facebook-blue.svg);
+  background-size: 35px 35px;
+}
+
+.SocialIconTwitter {
+  background: url(./assets/social/twitter-white.svg);
+  background-size: 35px 35px;
+  cursor: pointer;
+}
+
+.SocialIconTwitter:hover {
+  background: url(./assets/social/twitter-blue.svg);
+  background-size: 35px 35px;
+}
+
+.SocialIconInstagram {
+  background: url(./assets/social/instagram-white.svg);
+  background-size: 35px 35px;
+  cursor: pointer;
+}
+
+.SocialIconInstagram:hover {
+  background: url(./assets/social/instagram-blue.svg);
+  background-size: 35px 35px;
+}
+
+.storeIcons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 30%;
+}
+
+.storeIcon {
+  width: 135px;
+  height: 40px;
+  margin-right: 30px;
+}
