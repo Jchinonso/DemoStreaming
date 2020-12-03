@@ -1,33 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import List from "../Common/List";
 import ImageItem from "../Common/ImageItem";
-import useGetEntriesHook from "../../action/useGetEntriesHook";
-import entriesReducer from "../../reducers/entriesReducer";
+import useFetchApi from "../../Hooks/useFetchApi";
 import PageHeader from "../Common/PageHeader";
 import "./Movies.css";
 
 const Movies = () => {
-  const { state, getEntries } = useGetEntriesHook(entriesReducer, {
-    entries: [],
-  });
-  let [isLoading, setIsLoading] = useState(true);
-  let [failedFetch, setFailedFetch] = useState(false);
-  let [mounted, setMounted] = useState(true);
-  
-  useEffect(() => {
-    setMounted(true);
-    if (mounted) {
-      getEntries()
-        .then(() => {
-          setIsLoading(false);
-        })
-        .catch((e) => {
-          setFailedFetch(true);
-        });
-    }
-
-    return () => setMounted(false);
-  }, [mounted, getEntries]);
+  const { isLoading, failedFetch, state } = useFetchApi();
 
   const showList = (state, isLoading, failedFetch) => {
     let filteredEntries = [];
@@ -57,7 +36,6 @@ const Movies = () => {
       </List>
     );
   };
-
   return (
     <div>
       <PageHeader title={"Popular Movies"} />
