@@ -3,7 +3,7 @@ import axios from "axios";
 import * as types from "../constant/actionTypes";
 import { sortByTitle } from "../helper/sortByTitle";
 
-const useGetEntries = (reducer, initialState) => {
+const useGetEntriesHook = (reducer, initialState) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
 
@@ -30,4 +30,4 @@ const useGetEntries = (reducer, initialState) => {
   return { state, getEntries };
 };
 
-export default useGetEntries;
+export default useGetEntriesHook;

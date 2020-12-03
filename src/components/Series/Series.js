@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import List from "../Common/List";
 import ImageItem from "../Common/ImageItem";
-import useGetEntries from "../../action/useGetEntries";
+import useGetEntriesHook from "../../action/useGetEntriesHook";
 import entriesReducer from "../../reducers/entriesReducer";
 import PageHeader from "../Common/PageHeader";
 import "./Series.css";
 
 const Series = () => {
-  const { state, getEntries } = useGetEntries(entriesReducer, { entries: [] });
+  const { state, getEntries } = useGetEntriesHook(entriesReducer, { entries: [] });
   let [isLoading, setIsLoading] = useState(true);
   let [failedFetch, setFailedFetch] = useState(false);
 
