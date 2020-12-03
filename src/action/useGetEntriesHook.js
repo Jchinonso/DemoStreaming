@@ -1,19 +1,19 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 import axios from "axios";
 import * as types from "../constant/actionTypes";
 import { sortByTitle } from "../helper/sortByTitle";
 
+const URL =
+  "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json";
+
 const useGetEntriesHook = (reducer, initialState) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-
   const getEntries = async () => {
     try {
-      const movies = await axios.get(
-        "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json"
-      );
+      const entriesArray = await axios.get(URL);
 
-      const sortedEntries = movies.data.entries
+      const sortedEntries = entriesArray.data.entries
         .filter((item) => {
           return item.releaseYear >= 2010;
         })
