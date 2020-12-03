@@ -19,7 +19,7 @@ const Series = () => {
       .catch((e) => {
         setFailedFetch(true);
       });
-  }, [getEntries]);
+  });
 
   const showList = (state, isLoading, failedFetch) => {
     let filteredEntries = [];

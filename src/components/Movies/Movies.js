@@ -23,7 +23,7 @@ const Movies = () => {
     return () => {
       return null;
     };
-  }, []);
+  });
 
   const showList = (state, isLoading, failedFetch) => {
     let filteredEntries = [];
@@ -39,7 +39,6 @@ const Movies = () => {
         return entry.programType === "movie";
       });
     }
-    console.log("loading");
     return (
       <List>
         {filteredEntries.map((entry) => {
